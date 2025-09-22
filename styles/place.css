@@ -20,7 +20,7 @@
 body {
     display: flex;
     flex-direction: column;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    font-family: "Helvetica Neue", Arial;
     margin: 0;
     background: var(--bg);
     color: var(--muted);
@@ -166,14 +166,12 @@ body {
     }
 
     .data-panel h2 {
-        padding: auto;
         background-color: rgba(0, 128, 0, 0.5);
         color: rgb(255 255 255 / 0.9);
         border-radius: var(--radius);
     }
 
     .weather-heading {
-        padding: auto;
         text-align: center;
         background-color: rgba(0, 128, 0, 0.5);
         color: rgb(255 255 255 / 0.9);
@@ -210,14 +208,13 @@ footer {
     text-align: center;
     height: 80px;
     background-color: #F9423A;
-    color: #fff;
-    padding: auto;
+    color: #000;
     border-top: 1px solid rgba(0, 0, 0, 0.06);
     margin-top: auto;
 }
 
 footer p {
     background-color: #F9423A;
-    color: #fff;
+    color: #000;
     width: 100%;
 }
