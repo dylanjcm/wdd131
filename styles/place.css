@@ -20,7 +20,7 @@
 body {
     display: flex;
     flex-direction: column;
-    font-family: "Helvetica Neue", Arial;
+    font-family: "Roboto", "Helvetica Neue", Arial;
     margin: 0;
     background: var(--bg);
     color: var(--muted);
