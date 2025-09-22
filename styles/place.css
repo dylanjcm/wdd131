@@ -1,7 +1,6 @@
 :root {
     --bg: #fff9f0;
     --accent: #c62828;
-    /* example: flag color */
     --muted: #333444;
     --card-bg: #ffffff;
     --gap: 1rem;
@@ -216,5 +215,6 @@ footer {
 footer p {
     background-color: #F9423A;
     color: #000;
+    font-size: 1rem;
     width: 100%;
 }
