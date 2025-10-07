@@ -1,0 +1,53 @@
+/* Color Schema */
+:root {
+    --primary-color: #1E3A8A;
+    /* Deep blue for headings */
+    --secondary-color: #FACC15;
+    /* Bright gold for accents */
+    --background-color: #F9FAFB;
+    /* Light gray background */
+    --text-color: #1F2937;
+    /* Dark gray for paragraphs */
+}
+
+body {
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 2rem;
+    line-height: 1.6;
+}
+
+header,
+section {
+    margin-bottom: 2rem;
+}
+
+h1,
+h2 {
+    font-family: 'Roboto', 'Poppins', sans-serif;
+    color: var(--primary-color);
+}
+
+h1 {
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+img.logo {
+    width: 100px;
+}
+
+.wireframes img {
+    max-width: 100%;
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    margin-top: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: #555;
+}
