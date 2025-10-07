@@ -2,72 +2,73 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Product Review Form - WDD 131</title>
-  <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Product Review Form project" />
-  <meta name="author" content="Dylan Janesky Calderon Machado" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles/form.css" />
-  <script src="scripts/form.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form - WDD 131</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Product Review Form project">
+    <meta name="author" content="Dylan Janesky Calderon Machado">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
 </head>
 
 <body>
-  <header>
-    <h1>Product Review Form</h1>
-  </header>
+    <header>
+        <h1>Product Review Form</h1>
+    </header>
 
-  <main>
-    <form method="get" action="review.html">
-      <!-- Product Name -->
-      <label for="productName">Product Name:</label>
-      <select id="productName" name="productName" required>
-        <option value="" disabled selected>Select a Product ...</option>
-        <!-- Options inserted dynamically with JS -->
-      </select>
+    <main>
+        <form method="get" action="review.html">
+            <!-- Product Name -->
+            <label for="productName">Product Name:</label>
+            <select id="productName" name="productName" required>
+                <option value="" disabled selected>Select a Product ...</option>
+                <!-- Options inserted dynamically with JS -->
+            </select>
 
-      <!-- Overall Rating -->
-      <fieldset>
-        <legend>Overall Rating</legend>
-        <label><input type="radio" name="rating" value="1" required> ☆</label>
-        <label><input type="radio" name="rating" value="2"> ☆☆</label>
-        <label><input type="radio" name="rating" value="3"> ☆☆☆</label>
-        <label><input type="radio" name="rating" value="4"> ☆☆☆☆</label>
-        <label><input type="radio" name="rating" value="5"> ☆☆☆☆☆</label>
-      </fieldset>
+            <!-- Overall Rating -->
+            <fieldset>
+                <legend>Overall Rating</legend>
+                <label><input type="radio" name="rating" value="1" required> ☆</label>
+                <label><input type="radio" name="rating" value="2"> ☆☆</label>
+                <label><input type="radio" name="rating" value="3"> ☆☆☆</label>
+                <label><input type="radio" name="rating" value="4"> ☆☆☆☆</label>
+                <label><input type="radio" name="rating" value="5"> ☆☆☆☆☆</label>
+            </fieldset>
 
-      <!-- Date of Installation -->
-      <label for="installDate">Date of Installation:</label>
-      <input type="date" id="installDate" name="installDate" required />
+            <!-- Date of Installation -->
+            <label for="installDate">Date of Installation:</label>
+            <input type="date" id="installDate" name="installDate" required />
 
-      <!-- Useful Features -->
-      <fieldset>
-        <legend>Useful Features (check all that apply):</legend>
-        <label><input type="checkbox" id="feature1" name="features" value="Durability"> Durability</label>
-        <label><input type="checkbox" id="feature2" name="features" value="Ease of Use"> Ease of Use</label>
-        <label><input type="checkbox" id="feature3" name="features" value="Design"> Design</label>
-        <label><input type="checkbox" id="feature4" name="features" value="Performance"> Performance</label>
-      </fieldset>
+            <!-- Useful Features -->
+            <fieldset>
+                <legend>Useful Features (check all that apply):</legend>
+                <label><input type="checkbox" id="feature1" name="features" value="Durability"> Durability</label>
+                <label><input type="checkbox" id="feature2" name="features" value="Ease of Use"> Ease of Use</label>
+                <label><input type="checkbox" id="feature3" name="features" value="Design"> Design</label>
+                <label><input type="checkbox" id="feature4" name="features" value="Performance"> Performance</label>
+            </fieldset>
 
-      <!-- Written Review -->
-      <label for="review">Written Review:</label>
-      <textarea id="review" name="review" rows="4" placeholder="Share your experience..."></textarea>
+            <!-- Written Review -->
+            <label for="review">Written Review:</label>
+            <textarea id="review" name="review" rows="4" placeholder="Share your experience..."></textarea>
 
-      <!-- User Name -->
-      <label for="username">Your Name (optional):</label>
-      <input type="text" id="username" name="username" />
+            <!-- User Name -->
+            <label for="username">Your Name (optional):</label>
+            <input type="text" id="username" name="username" />
 
-      <!-- Submit Button -->
-      <input type="submit" value="Submit Review" />
-    </form>
-  </main>
+            <!-- Submit Button -->
+            <input type="submit" value="Send Review" />
+        </form>
+    </main>
 
-  <footer>
-    <p><span id="currentyear"></span> - Dylan Janesky Calderon Machado - Sao Paulo, Brazil</p>
-    <p id="lastModified"></p>
-  </footer>
+    <footer>
+        <p><span id="currentyear"></span> - Dylan Janesky Calderon Machado - Sao Paulo, Brazil</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 
 </html>
