@@ -1,0 +1,249 @@
+:root {
+    --primary-color: #1E3A8A;
+    /* Deep blue for headings */
+    --secondary-color: #FACC15;
+    /* Bright gold for accents */
+    --background-color: #F9FAFB;
+    /* Light gray background */
+    --text-color: #1F2937;
+    /* Dark gray for paragraphs */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 2rem;
+    line-height: 1.6;
+}
+
+header,
+section {
+    margin-bottom: 2rem;
+}
+
+#logo {
+    width: 80px;
+}
+
+h1 {
+    font-family: 'Roboto', 'Poppins', sans-serif;
+    font-size: 1.5rem;
+}
+
+header {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--primary-color);
+    color: #fff;
+    grid-template-rows: 1fr;
+}
+
+
+header h1 {
+    align-self: center;
+    text-align: left;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+}
+
+p {
+    font-size: 0.95rem;
+}
+
+#logo {
+    width: 150px;
+    grid-column: 1 / 2;
+    justify-self: start;
+    padding: 10px;
+}
+
+.header-container {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    grid-column: 1 / 3;
+}
+
+header nav {
+    margin: 0;
+    grid-column: 1 / 3;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+
+}
+
+nav ul li {
+    flex: 1 1 100%;
+}
+
+nav {
+    margin: 0 auto;
+    width: 100%;
+}
+
+nav a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    border: 1px solid white;
+}
+
+main {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: grid;
+}
+
+main h2 {
+    padding: 20px;
+}
+
+.navigation {
+    flex-direction: row;
+    background-color: var(--primary-color);
+    /* fixes */
+    grid-column: 1 / 3;
+    justify-content: space-around;
+    margin: auto 45px auto auto;
+    width: auto;
+}
+
+.navigation a {
+    display: block;
+    flex: 1 1 100%;
+    border: 0;
+}
+
+.navigation a:hover {
+    background-color: #152a63;
+    color: #fff;
+    font-weight: 700;
+}
+
+#active {
+    text-decoration: underline var(--secondary-color) 2px;
+}
+
+footer {
+    text-align: center;
+    height: 80px;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 5px;
+    margin-top: auto;
+    border: 5px solid var(--primary-color);
+}
+
+footer p {
+    background-color: var(--primary-color);
+    color: #fff;
+    width: 100%;
+}
+
+.movie-card img {
+    width: 72px;
+    height: 106px;
+    align-self: center;
+    margin: 10px auto;
+    border-radius: 4px;
+}
+
+.movie-image:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.movie-card a img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.movie-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    margin: 10px 0;
+}
+
+.movie-card a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    align-self: flex-end;
+    margin-top: auto;
+    margin-right: 20px;
+}
+
+.movie-card a:hover {
+    transform: scale(1.1);
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+
+.textbox {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
+#first-paragraph {
+    margin-top: 0;
+}
+
+#welcome {
+    margin-bottom: 0;
+}
+
+#recommended {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 450px) {
+    .navigation {
+        margin: 0;
+        margin: auto 45px auto auto;
+        flex-wrap: wrap;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+    }
+}
+
+@media (max-width: 581px) {
+    .movie-card img {
+        margin-left: 5px;
+    }
+}
