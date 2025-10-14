@@ -93,27 +93,27 @@ filterContainer.innerHTML = `
 
 document.querySelector(".genre-buttons").prepend(filterContainer);
 
+// Select all filter buttons once
 const filterButtons = document.querySelectorAll(".filter-btn");
-filterButtons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    const genre = btn.dataset.genre;
+
+// Loop through each button to add a single event listener
+filterButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    // --- Action 1: Handle the active state ---
+
+    // First, remove the 'active' class from all buttons
+    filterButtons.forEach(btn => {
+      btn.classList.remove('active');
+    });
+
+    // Then, add the 'active' class to the button that was just clicked
+    button.classList.add('active');
+
+
+    // --- Action 2: Filter movies and save state ---
+
+    const genre = button.dataset.genre;
     filterMovies(genre);
     localStorage.setItem("selectedGenre", genre);
   });
-});
-
-const filterButtonsActive = document.querySelectorAll('.filter-btn');
-
-// Loop through each button
-filterButtonsActive.forEach(button => {
-    // Add a click event listener to each button
-    button.addEventListener('click', () => {
-        // First, remove the 'active' class from all filter buttons
-        filterButtonsActive.forEach(btn => {
-            btn.classList.remove('active');
-        });
-
-        // Then, add the 'active' class to the button that was just clicked
-        button.classList.add('active');
-    });
 });
