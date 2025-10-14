@@ -1,208 +1,29 @@
-:root {
-    --primary-color: #1E3A8A;
-    /* Deep blue for headings */
-    --secondary-color: #FACC15;
-    /* Bright gold for accents */
-    --background-color: #F9FAFB;
-    /* Light gray background */
-    --text-color: #1F2937;
-    /* Dark gray for paragraphs */
-    box-sizing: border-box;
-}
+/* === Contact Page Specific Styles === */
 
-body {
-    font-family: 'Roboto', 'Open Sans', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    margin: 2rem;
+main {
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 600px;
     line-height: 1.6;
 }
 
-header,
 section {
-    margin-bottom: 2rem;
+    margin: 5px 0 0 2rem;
 }
 
-#logo {
-    width: 80px;
+section button, #submitSuggestion {
+    background-color: var(--primary-color, #1b3a94);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s;
 }
 
-h1 {
-    font-family: 'Roboto', 'Poppins', sans-serif;
-    font-size: 1.5rem;
-}
-
-header {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: 1fr 1fr;
-    background-color: var(--primary-color);
-    color: #fff;
-    grid-template-rows: 1fr;
-}
-
-
-header h1 {
-    align-self: center;
-    text-align: left;
-}
-
-h2 {
-    font-size: 1.25rem;
-}
-
-h3 {
-    font-size: 1.1rem;
-}
-
-p {
-    font-size: 0.95rem;
-}
-
-#logo {
-    width: 150px;
-    grid-column: 1 / 2;
-    justify-self: start;
-    padding: 10px;
-}
-
-.header-container {
-    display: flex;
-    gap: 20px;
-    padding: 10px;
-    grid-column: 1 / 3;
-}
-
-header nav {
-    margin: 0;
-    grid-column: 1 / 3;
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-
-}
-
-nav ul li {
-    flex: 1 1 100%;
-}
-
-nav {
-    margin: 0 auto;
-    width: 100%;
-}
-
-nav a {
-    display: block;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    text-decoration: none;
-}
-
-nav a:hover {
-    border: 1px solid white;
-}
-
-main {
-    max-width: 1024px;
-    margin: 0 auto;
-    display: grid;
-}
-
-main h2 {
-    padding: 20px;
-}
-
-.navigation {
-    flex-direction: row;
-    background-color: var(--primary-color);
-    /* fixes */
-    grid-column: 1 / 3;
-    justify-content: space-around;
-    margin: auto 45px auto auto;
-    width: auto;
-}
-
-.navigation a {
-    display: block;
-    flex: 1 1 100%;
-    border: 0;
-}
-
-.navigation a:hover {
+section button:hover, #submitSuggestion:hover {
     background-color: #152a63;
-    color: #fff;
-    font-weight: 700;
-}
-
-#active {
-    text-decoration: underline var(--secondary-color) 2px;
-}
-
-footer {
-    text-align: center;
-    height: 80px;
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 5px;
-    margin-top: auto;
-    border: 5px solid var(--primary-color);
-}
-
-footer p {
-    background-color: var(--primary-color);
-    color: #fff;
-    width: 100%;
-}
-
-#first-paragraph {
-    margin-top: 0;
-}
-
-#welcome {
-    margin-bottom: 0;
-}
-
-main {
-  text-align: center;
-  margin: 2rem auto;
-  max-width: 600px;
-  line-height: 1.6;
-}
-
-section button {
-  background-color: var(--primary-color, #1b3a94);
-  color: white;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  margin: 10px;
-  transition: background-color 0.3s;
-}
-
-section button:hover {
-  background-color: #152a63;
-}
-
-
-#submitSuggestion {
-  background-color: var(--primary-color, #1b3a94);
-  color: white;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  margin: 10px;
-  transition: background-color 0.3s;
-}
-
-#submitSuggestion:hover {
-  background-color: #152a63;
 }
 
 form {
@@ -215,6 +36,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    margin: 0 auto 20px;
 }
 
 fieldset {
@@ -259,46 +81,4 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: var(--accent);
     color: #000;
-}
-
-section {
-    margin: 5px 0 0 2rem;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 450px) {
-    .navigation {
-        margin: 0;
-        margin: auto 45px auto auto;
-        flex-wrap: wrap;
-    }
-
-    .header-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        height: auto;
-    }
-}
-
-@media (max-width: 581px) {
-    .movie-card img {
-        margin-left: 5px;
-    }
 }

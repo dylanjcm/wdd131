@@ -1,0 +1,66 @@
+/* === Top 10 Specific Styles === */
+
+#recommended {
+    margin-bottom: 5px;
+}
+
+.movie-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    margin: 10px 0;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.movie-card img {
+    width: 72px;
+    height: 106px;
+    align-self: center;
+    margin: 10px auto;
+    border-radius: 4px;
+}
+
+.movie-image:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.movie-card a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    align-self: flex-end;
+    margin-top: auto;
+    margin-right: 20px;
+}
+
+.movie-card a:hover {
+    transform: scale(1.1);
+}
+
+.movie-card a img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.textbox {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
+@media (max-width: 581px) {
+    .movie-card img {
+        margin-left: 5px;
+    }
+}
