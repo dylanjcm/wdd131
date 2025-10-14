@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Best Movies To Watch</title>
+    <meta name="description" content="Contact page for the Movies Website Project for WDD 131">
+    <meta name="author" content="Dylan Janesky Calderon Machado">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/contact-large.css">
+    <script src="scripts/contact.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img src="images/10movies-logo.png" alt="Best Movies to Watch Logo" id="logo">
+            <h1>Best Movies to Watch</h1>
+        </div>
+        <nav>
+            <ul class="navigation">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="top10.html">Top 10</a></li>
+                <li><a href="genres.html">Genres</a></li>
+                <li><a href="contact.html" id="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2 id="welcome">Welcome to Best Movies to Watch!</h2>
+        <p id="first-paragraph">
+            We're always looking for great films to add to our recommendations!
+            If you have a favorite movie that you think deserves a spot on our site,
+            fill out the form below and share your suggestion with us.
+        </p>
+        <p>
+            Whether it's a hidden indie gem or a blockbuster classic,
+            we'd love to know why you think it's worth watching.
+            Your submissions help us grow our collection and bring the best movies to fellow fans!
+        </p>
+
+        <form id="movieSuggestionForm" method="get" action="review.html">
+            <fieldset>
+                <legend>Movie Information</legend>
+
+                <label for="movieTitle">Movie Title:</label>
+                <input type="text" id="movieTitle" name="movieTitle" placeholder="Enter the movie title" required>
+
+                <label for="movieYear">Release Year:</label>
+                <input type="number" id="movieYear" name="movieYear" min="1900" max="2025" placeholder="e.g., 2023"
+                    required>
+
+                <label for="movieGenre">Genre(s):</label>
+                <input type="text" id="movieGenre" name="movieGenre" placeholder="e.g., Action, Drama, Comedy" required>
+
+                <label for="movieDescription">Why do you recommend it?</label>
+                <textarea id="movieDescription" name="movieDescription" rows="4"
+                    placeholder="Write a short reason why this movie should be added..." required></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Your Information</legend>
+
+                <label for="userName">Your Name (optional):</label>
+                <input type="text" id="userName" name="userName" placeholder="Your name">
+
+                <label for="userEmail">Email (optional):</label>
+                <input type="email" id="userEmail" name="userEmail" placeholder="you@example.com">
+            </fieldset>
+
+            <input type="submit" id="submitSuggestion" value="Send Suggestion">
+        </form>
+    </main>
+    <footer>
+        <p><span id="currentyear"></span> - Dylan Janesky Calderon Machado - Sao Paulo, Brazil</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

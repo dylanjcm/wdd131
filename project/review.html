@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation - Best Movies to Watch</title>
+    <meta name="description" content="Review Submission page for the Movies Website Project for WDD 131">
+    <meta name="author" content="Dylan Janesky Calderon Machado">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/contact-large.css">
+    <script defer>
+        window.addEventListener("DOMContentLoaded", () => {
+            // Retrieve and display counter
+            const reviewCount = Number(localStorage.getItem("reviewCount")) || 0;
+            document.querySelector("#counter").textContent = reviewCount;
+
+            // Footer info
+            document.querySelector("#currentyear").textContent = new Date().getFullYear();
+            document.querySelector("#lastModified").textContent = `Last Modified: ${document.lastModified}`;
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img src="images/10movies-logo.png" alt="Best Movies to Watch Logo" id="logo">
+            <h1>Best Movies to Watch</h1>
+        </div>
+        <nav>
+            <ul class="navigation">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="top10.html">Top 10</a></li>
+                <li><a href="genres.html">Genres</a></li>
+                <li><a href="contact.html" id="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Thank You for Your Suggestion!</h2>
+        <p>Your movie suggestion has been successfully submitted.</p>
+        <p>You have submitted <strong id="counter"></strong> suggestion(s) so far.</p>
+        <section>
+            <button onclick="window.location.href='homepage.html'">Go Back Home</button>
+            <button onclick="window.location.href='contact.html'">Submit Another</button>
+        </section>
+    </main>
+
+    <footer>
+        <p><span id="currentyear"></span> - Dylan Janesky Calderon Machado - São Paulo, Brazil</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
