@@ -76,7 +76,7 @@ const filterContainer = document.createElement("div");
 filterContainer.classList.add("filter-container");
 filterContainer.innerHTML = `
   <div class="genre-buttons">
-    <button class="filter-btn" data-genre="All">All</button>
+    <button class="filter-btn active" data-genre="All">All</button>
     <button class="filter-btn" data-genre="Sci-Fi">Sci-Fi</button>
     <button class="filter-btn" data-genre="Action">Action</button>
     <button class="filter-btn" data-genre="Fantasy">Fantasy</button>
@@ -100,4 +100,20 @@ filterButtons.forEach(btn => {
     filterMovies(genre);
     localStorage.setItem("selectedGenre", genre);
   });
+});
+
+const filterButtonsActive = document.querySelectorAll('.filter-btn');
+
+// Loop through each button
+filterButtonsActive.forEach(button => {
+    // Add a click event listener to each button
+    button.addEventListener('click', () => {
+        // First, remove the 'active' class from all filter buttons
+        filterButtonsActive.forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        // Then, add the 'active' class to the button that was just clicked
+        button.classList.add('active');
+    });
 });
